@@ -32,7 +32,7 @@ post '/callback' do
         response = client.get_message_content(event.message['id'])
         tf = Tempfile.open("content")
         wt = tf.write(response.body)
-        client.reply_message(event['replyToken'], {type: 'text', text: "got it bro"})
+        client.reply_message(event['replyToken'], {type: 'image', originalContentUrl: "https://img-aws.ehowcdn.com/750x428p/cpi.studiod.com/www_ehow_com/i.ehow.com/images/a06/3a/be/study-compass-math-placement-test-800x800.jpg"})
       end
     end
   }
