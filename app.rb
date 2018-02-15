@@ -32,7 +32,7 @@ post '/callback' do
         response = client.get_message_content(event.message['id'])
         tf = Tempfile.open("content")
         wt = tf.write(response.body)
-        client.reply_message(event['replyToken'], {type: 'image', text: "got it bro"})
+        client.reply_message(event['replyToken'], {type: 'text', text: "got it bro"})
       end
     end
   }
